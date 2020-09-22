@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ételautomata</title>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="automata">
+		<div class="bal" id="bal"></div>
+		
+		<div class="jobb">
+			<div class="kijelzo" id="kijelzo"></div>
+			<div class="gombok" id="gombok"></div>
+		
+		</div>
+	</div>
+	
+<script>
+	/*JOBB*/
+	let buttons = document.getElementById("gombok");
+	let screen = document.getElementById("kijelzo");
+	
+	for(let i = 1; i <= 9; i++){
+		buttons.innerHTML += '<button onclick="gombnyomas(' + i + ')">' + i + '</button>';
+	}
+	
+	function gombnyomas(szam){
+		screen.innerHTML = szam;
+	}
+	
+	/*BAL*/
+	
+	let tarolo = document.getElementById("bal");
+	tarolo.innerHTML += '<div class="kaja" id="kaja1"></div>';
+
+</script>
+</body>
+</html>

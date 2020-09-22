@@ -1,0 +1,51 @@
+.automata{
+	width: 30vw;
+	min-width: 300px;
+	height: 80vh;
+	border: 1px solid black;
+	margin: auto;
+	margin-top: 10vh;
+	padding: 10px;
+	
+	background-color: black;
+}
+
+.bal, .jobb {
+	height: 100%;
+}
+
+.bal{
+	width: 60%;
+	background-color: lightblue;
+	float: left;
+}
+
+.jobb{
+	width: 40%;
+	background-color: darkgray;
+	float: right;
+}
+
+.kijelzo{
+	width: 90%;
+	height: 30px;
+	background-color: black;
+	margin: auto;
+	margin-top: 50px;
+	
+	color: red;
+	text-align: center;
+	font-size: 20px;
+}
+
+.gombok{
+	width: 90%;
+	min-height: 50px;
+	border: 1px solid black;
+	margin: auto;
+	margin-top: 20px;
+}
+
+.gombok button {
+	width: calc(100% / 3);
+}
