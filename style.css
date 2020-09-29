@@ -49,3 +49,43 @@
 .gombok button {
 	width: calc(100% / 3);
 }
+
+.kaja{
+	width: 50%;
+	height: calc(100% / 3);
+	float:left;
+}
+
+.kaja img {
+	width: 100%;
+}
+
+.kaja div {
+	font-size: 20px;
+	background-color: black;
+	color: white;
+	width: 100%;
+	text-align: center;
+}
+
+.lyuk{
+	width: 80%;
+	margin-left: 10%;
+	height: 100px;
+	border-radius: 10px;
+	border: 2px solid black;
+	margin-top: 20px;
+}
+
+.lyuk img{
+	width: 90%;
+	max-height: 80%;
+	margin-top: 10%;
+	margin-left: 5%;
+}
+
+.ok_btn{
+	margin-top: 20px;
+	width: 50px;
+	margin-left: calc(50% - 25px);
+}

@@ -9,33 +9,60 @@
 </head>
 <body>
     <div class="automata">
-		<div class="bal" id="bal"></div>
+		<div class="bal" id="bal">
+
+		</div>
 		
 		<div class="jobb">
 			<div class="kijelzo" id="kijelzo"></div>
 			<div class="gombok" id="gombok"></div>
-		
+			<button class="ok_btn" onclick="megveszem()">OK</button>
+			<div id="lyuk" class="lyuk"></div>
 		</div>
 	</div>
 	
 <script>
-	/*JOBB*/
+	// VÁLTOZÓK
 	let buttons = document.getElementById("gombok");
 	let screen = document.getElementById("kijelzo");
-	
+	let tarolo = document.getElementById("bal");
+	let img_etelek = [
+		"apple.png",
+		"banana.png",
+		"burger.png"
+	];
+	let kod = 0;
+	let hole = document.getElementById("lyuk");
+
+	//INICIALIZÁLÁS
 	for(let i = 1; i <= 9; i++){
 		buttons.innerHTML += '<button onclick="gombnyomas(' + i + ')">' + i + '</button>';
 	}
 	
-	function gombnyomas(szam){
-		screen.innerHTML = szam;
+	for(let etelindex = 0; etelindex < img_etelek.length; etelindex++){
+		tarolo.innerHTML += 
+		'<div class="kaja" id="kaja1">'+
+			'<img src="'+
+			img_etelek[etelindex]+
+			'">'+
+			'<div>' + (etelindex + 1) + '</div>' +
+			'</div>';
 	}
 	
-	/*BAL*/
-	
-	let tarolo = document.getElementById("bal");
-	tarolo.innerHTML += '<div class="kaja" id="kaja1"></div>';
+	// FÜGGVÉNYEK
+	function gombnyomas(szam){
+		kod = szam;
+		screen.innerHTML = szam;
+	}
 
+	function megveszem(){
+		let kep = img_etelek[kod-1];
+		if(kep != undefined){
+		hole.innerHTML = '<img src="'+kep+'">';
+		}else{
+		screen.innerHTML = "HIBA"; 
+		}
+	}
 </script>
 </body>
 </html>
